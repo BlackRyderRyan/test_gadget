@@ -4,6 +4,9 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Request;
+import org.junit.runner.Result;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -21,6 +24,7 @@ public class TestSelectionFrame extends JFrame {
 
     private JPanel contentPane;
     private JButton jbReadJava, jbReadxls, jbFresh, jbText;
+    private JRadioButton jrb_non_parameter, jrb_parameter;
     private JTextField javaName, xlsxName;
     private JComboBox functionName;
     private DefaultComboBoxModel model;
@@ -42,13 +46,13 @@ public class TestSelectionFrame extends JFrame {
     public TestSelectionFrame() {
         setTitle("Software Testing");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(500, 400);
+        setSize(600, 400);
         setLocationRelativeTo(null);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         contentPane.setLayout(new BorderLayout(0, 0));
         setContentPane(contentPane);
-        JPanel panel = new JPanel(new GridLayout(4, 1, 4, 10));
+        JPanel panel = new JPanel(new GridLayout(5, 1, 5, 10));
         panel.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         contentPane.add(panel, BorderLayout.CENTER);
 
@@ -79,15 +83,25 @@ public class TestSelectionFrame extends JFrame {
 
         JPanel panel_3 = new JPanel();
         panel.add(panel_3);
+        jrb_non_parameter = new JRadioButton("无参数");
+        panel_3.add(jrb_non_parameter);
+        jrb_parameter = new JRadioButton("有参数");
+        panel_3.add(jrb_parameter);
+        ButtonGroup bg_parameter_choose = new ButtonGroup();
+        bg_parameter_choose.add(jrb_non_parameter);
+        bg_parameter_choose.add(jrb_parameter);
+
+        JPanel panel_4 = new JPanel();
+        panel.add(panel_4);
         model = new DefaultComboBoxModel();
         functionName = new JComboBox();
         functionName.setEditable(true);
         functionName.setModel(model);
-        panel_3.add(functionName);
+        panel_4.add(functionName);
         jbFresh = new JButton("刷新");
-        panel_3.add(jbFresh);
+        panel_4.add(jbFresh);
         jbText = new JButton("测试");
-        panel_3.add(jbText);
+        panel_4.add(jbText);
 
         jbReadJava.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -107,7 +121,6 @@ public class TestSelectionFrame extends JFrame {
                 fd.setVisible(true);
                 if((fd.getDirectory() != null) && (fd.getFile() != null)){
                     xlsxName.setText(fd.getDirectory() + fd.getFile());
-                    System.out.println(xlsxName.getText());
                 }
             }
         });
@@ -117,7 +130,7 @@ public class TestSelectionFrame extends JFrame {
                 String jaName = javaName.getText();
 
                 try {
-                    Class<?> cls = Class.forName("Experimental");
+                    Class<?> cls = Class.forName(jaName);
 
                     Method[] methods = cls.getDeclaredMethods();
 
@@ -143,69 +156,72 @@ public class TestSelectionFrame extends JFrame {
 
                     Class<?> cls = Class.forName(janame);
 
-                    Object obj = cls.newInstance();
+                    if (jrb_non_parameter.isSelected()) {
+                        Result result = new JUnitCore().run(Request.method(cls, methodname));
+                        System.out.println(result.wasSuccessful());
+                        System.out.println(result.getFailures());
+                        System.out.println(result.getRunCount());
+                    } else {
+                        Method[] methods = cls.getDeclaredMethods();
 
-                    Method[] methods = cls.getDeclaredMethods();
-
-
-                    for (Method method : methods) {
-                        if (method.getName() == methodname) {
-                            currentMethod = cls.getMethod(method.getName(), int.class, int.class, int.class);
+                        for (Method method : methods) {
+                            if (method.getName() == methodname) {
+                                currentMethod = cls.getMethod(method.getName(), int.class, int.class, int.class);
+                            }
                         }
-                    }
 
-                    //得到Excel常用对象
-                    FileInputStream fIP = new FileInputStream(xlname);
+                        //得到Excel常用对象
+                        FileInputStream fIP = new FileInputStream(xlname);
 
-                    //得到Excel工作簿对象
-                    XSSFWorkbook wb = new XSSFWorkbook(fIP);
+                        //得到Excel工作簿对象
+                        XSSFWorkbook wb = new XSSFWorkbook(fIP);
 
-                    //得到Excel工作表对象
-                    XSSFSheet sheet = wb.getSheetAt(0);
+                        //得到Excel工作表对象
+                        XSSFSheet sheet = wb.getSheetAt(0);
 
-                    //总行数
-                    int trLength = sheet.getLastRowNum() + 1;
+                        //总行数
+                        int trLength = sheet.getLastRowNum() + 1;
 
-                    //得到Excel工作表的行
-                    XSSFRow row = sheet.getRow(0);
-
-                    //总列数
-                    int tdLength = row.getLastCellNum();
-
-                    //得到Excel工作表指定行的单元格
-                    XSSFCell cell = row.getCell((short)1);
-
-                    //得到单元格样式
-                    CellStyle cellStyle = cell.getCellStyle();
-
-                    double[] value = new double[3];
-
-                    for(int i=0;i<trLength;i++){
                         //得到Excel工作表的行
-                        XSSFRow row1 = sheet.getRow(i);
+                        XSSFRow row = sheet.getRow(0);
 
-                        for(int j=0;j<tdLength;j++){
+                        //总列数
+                        int tdLength = row.getLastCellNum();
 
-                            //得到Excel工作表指定行的单元格
-                            XSSFCell cell1 = row1.getCell(j);
+                        //得到Excel工作表指定行的单元格
+                        XSSFCell cell = row.getCell((short)1);
 
-                            /**
-                             * 为了处理：Excel异常Cannot get a text value from a numeric cell
-                             * 将所有列中的内容都设置成Numeric类型格式
-                             */
-                            if(cell1!=null){
-                                cell1.setCellType(Cell.CELL_TYPE_NUMERIC);
+                        //得到单元格样式
+                        CellStyle cellStyle = cell.getCellStyle();
+
+                        double[] value = new double[3];
+
+                        for(int i=0;i<trLength;i++){
+                            //得到Excel工作表的行
+                            XSSFRow row1 = sheet.getRow(i);
+
+                            for(int j=0;j<tdLength;j++){
+
+                                //得到Excel工作表指定行的单元格
+                                XSSFCell cell1 = row1.getCell(j);
+
+                                /**
+                                 * 为了处理：Excel异常Cannot get a text value from a numeric cell
+                                 * 将所有列中的内容都设置成Numeric类型格式
+                                 */
+                                if(cell1!=null){
+                                    cell1.setCellType(Cell.CELL_TYPE_NUMERIC);
+                                }
+
+                                value[j] = cell1.getNumericCellValue();
                             }
 
-                            //获得每一列中的值
-//                            System.out.print(cell1.getStringCellValue()+"\t\t\t");
+                            Object obj = cls.newInstance();
 
-                            value[j] = cell1.getNumericCellValue();
+                            currentMethod.invoke(obj, (int)value[0], (int)value[1], (int)value[2]);
+
+                            System.out.println();
                         }
-
-                        currentMethod.invoke(obj, (int)value[0], (int)value[1], (int)value[2]);
-
-                        System.out.println();
                     }
                 } catch (FileNotFoundException ex) {
                     ex.printStackTrace();
