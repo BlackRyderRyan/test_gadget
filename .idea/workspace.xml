@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9b38aeb7-5a06-42f7-bef1-a6b8bb15afe7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ExperimentalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExperimentalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RealTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RealTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestSelectionFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestSelectionFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestSelectionFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestSelectionFrame$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ExperimentalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExperimentalTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RealTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RealTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TestSelectionFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestSelectionFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TestSelectionFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestSelectionFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TestSelectionFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestSelectionFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TestSelectionFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestSelectionFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TestSelectionFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestSelectionFrame.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/TestSelectionFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-114">
-              <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+            <state relative-caret-position="1634">
+              <caret line="88" column="35" lean-forward="true" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5290#9122#0" expanded="true" />
@@ -47,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ExperimentalTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="49" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="10" selection-end-column="49" />
+            <state relative-caret-position="171">
+              <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,6 +88,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -153,13 +162,14 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561785555937" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561786089451" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/code/TJU-SoftwareTest-backend-lyx/TJU-SoftwareTest-backend-lyx" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -237,7 +247,7 @@
       <workItem from="1561737920720" duration="81000" />
       <workItem from="1561741924489" duration="5968000" />
       <workItem from="1561775017151" duration="503000" />
-      <workItem from="1561776821571" duration="7443000" />
+      <workItem from="1561776821571" duration="7983000" />
     </task>
     <task id="LOCAL-00001" summary="Correction">
       <created>1561779167064</created>
@@ -253,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561779317331</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="New function: whether to include parameters">
+      <created>1561785674060</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1561785674060</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -268,13 +285,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39721000" />
+    <option name="totallyTimeSpent" value="40261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14879356" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14879356" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -284,7 +301,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33002833" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33002833" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39660057" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -293,7 +310,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32956153" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.31948423" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3186969" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32857144" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -314,7 +331,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction" />
+    <MESSAGE value="New function: whether to include parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="New function: whether to include parameters" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/just_for_exercise.iml">
@@ -366,16 +384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ExperimentalTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="49" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="10" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RealTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -383,10 +391,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ExperimentalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TestSelectionFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+        <state relative-caret-position="1634">
+          <caret line="88" column="35" lean-forward="true" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5290#9122#0" expanded="true" />
