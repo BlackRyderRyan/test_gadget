@@ -200,7 +200,7 @@ public class TestSelectionFrame extends JFrame {
                             //获得每一列中的值
 //                            System.out.print(cell1.getStringCellValue()+"\t\t\t");
 
-                            value[i] = cell1.getNumericCellValue();
+                            value[j] = cell1.getNumericCellValue();
                         }
 
                         currentMethod.invoke(obj, (int)value[0], (int)value[1], (int)value[2]);
