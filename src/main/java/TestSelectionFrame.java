@@ -166,7 +166,9 @@ public class TestSelectionFrame extends JFrame {
 
                         for (Method method : methods) {
                             if (method.getName() == methodname) {
-                                currentMethod = cls.getMethod(method.getName(), int.class, int.class, int.class);
+                                ////////////////////////////////////////////////////////////////////////////////////////重点要改！
+//                                currentMethod = cls.getMethod(method.getName(), int.class, int.class, int.class);
+                                currentMethod = cls.getMethod(method.getName(), String.class, String.class, String.class);
                             }
                         }
 
@@ -194,7 +196,9 @@ public class TestSelectionFrame extends JFrame {
                         //得到单元格样式
                         CellStyle cellStyle = cell.getCellStyle();
 
+                        ////////////////////////////////////////////////////////////////////////////////////////////////重点要改！
                         double[] value = new double[3];
+                        String[] value_string = new String[3];
 
                         for(int i=0;i<trLength;i++){
                             //得到Excel工作表的行
@@ -210,15 +214,21 @@ public class TestSelectionFrame extends JFrame {
                                  * 将所有列中的内容都设置成Numeric类型格式
                                  */
                                 if(cell1!=null){
-                                    cell1.setCellType(Cell.CELL_TYPE_NUMERIC);
+                                    ////////////////////////////////////////////////////////////////////////////////////重点要改！
+//                                    cell1.setCellType(Cell.CELL_TYPE_NUMERIC);
+                                    cell1.setCellType(Cell.CELL_TYPE_STRING);
                                 }
 
-                                value[j] = cell1.getNumericCellValue();
+                                ////////////////////////////////////////////////////////////////////////////////////////重点要改！
+//                                value[j] = cell1.getNumericCellValue();
+                                value_string[j] = cell1.getStringCellValue();
                             }
 
                             Object obj = cls.newInstance();
 
-                            currentMethod.invoke(obj, (int)value[0], (int)value[1], (int)value[2]);
+                            ////////////////////////////////////////////////////////////////////////////////////////////重点要改！
+//                            currentMethod.invoke(obj, (int)value[0], (int)value[1], (int)value[2]);
+                            currentMethod.invoke(obj, value_string[0], value_string[1], value_string[2]);
 
                             System.out.println();
                         }
