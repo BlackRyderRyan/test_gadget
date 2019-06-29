@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b38aeb7-5a06-42f7-bef1-a6b8bb15afe7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ExperimentalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExperimentalTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RealTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RealTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestSelectionFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestSelectionFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestSelectionFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestSelectionFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestSelectionFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestSelectionFrame$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestSelectionFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestSelectionFrame$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TestSelectionFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestSelectionFrame.class" afterDir="false" />
-    </list>
+    <list default="true" id="9b38aeb7-5a06-42f7-bef1-a6b8bb15afe7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,10 +80,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--follow-tags" />
-        <option name="title" value="Current Branch" />
-      </GitPushTagMode>
+      <GitPushTagMode />
     </option>
   </component>
   <component name="IdeDocumentHistory">
@@ -162,7 +150,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561786089451" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561786463979" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/code/TJU-SoftwareTest-backend-lyx/TJU-SoftwareTest-backend-lyx" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -247,7 +235,7 @@
       <workItem from="1561737920720" duration="81000" />
       <workItem from="1561741924489" duration="5968000" />
       <workItem from="1561775017151" duration="503000" />
-      <workItem from="1561776821571" duration="7983000" />
+      <workItem from="1561776821571" duration="8356000" />
     </task>
     <task id="LOCAL-00001" summary="Correction">
       <created>1561779167064</created>
@@ -270,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561785674060</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="New function: whether to include parameters">
+      <created>1561786331907</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1561786331907</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -285,11 +280,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40261000" />
+    <option name="totallyTimeSpent" value="40634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14879356" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -301,7 +295,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33002833" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.33002833" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39660057" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -309,7 +303,7 @@
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32904148" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32956153" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" visible="true" weight="0.33002833" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3186969" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32857144" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
